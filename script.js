@@ -52,6 +52,15 @@ toggleClavier.addEventListener('click', () => {
     setTimeout(() => inputNumero.focus(), 50);
 });
 
+// Entrée / "Aller" sur le clavier = même chose que cliquer sur "Générer"
+inputNumero.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        genererMeme();
+        inputNumero.blur(); // ferme le clavier pour voir directement le résultat
+    }
+});
+
 // Normalise ce que tape l'utilisateur : espaces retirés + minuscules
 // ("208A " et "208a" donnent la même clé)
 function normaliser(valeur) {
