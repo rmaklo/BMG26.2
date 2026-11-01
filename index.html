@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMG26</title>
+
+    <!-- Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#667eea">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font pour Google Sans Flex -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--<div class="container">-->
+        <h1>BMG</h1>
+
+        <div class="inputs">
+            <div class="champ-numero">
+                <input type="text" id="inputNumero" inputmode="numeric" placeholder="Insérer une ligne de bus" autocomplete="off">
+                <button type="button" id="toggleClavier">ABC</button>
+            </div>
+            <p id="apercu"></p>
+        </div>
+
+        <div id="boutons">
+           <button onclick="genererMeme()">Générer le BMG</button>
+            <button class="download-btn" onclick="telecharger()">Télécharger l'image</button> 
+        </div>
+
+        <canvas id="monCanvas" width="1080" height="2340"></canvas>
+    <!--</div>-->
+
+    <script src="script.js"></script>
+</body>
+</html>
